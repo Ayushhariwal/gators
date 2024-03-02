@@ -1,0 +1,46 @@
+
+<% layout("/layouts/boilersplate") %>
+<div class="row mt-3">
+    <div class="col-8 offset-2" >
+    <h3>Create New listing</h3>
+
+    <!-- enctype="multipart/form-data" -->
+
+    <form method="POST" action="/listings" class="needs-validation" novalidate > 
+        
+        <div class="mb-3"><label for="title" class="form-label">Title</label>
+            <input type="text" name="listing[title]" placeholder="enter title" class="form-control" required>
+            <div class="valid-feedback">Title looks good!</div>
+        </div>
+            
+
+        <div class="mb-3"><label for="description" class="form-label">description</label>
+            <textarea name="listing[description]" id="" cols="30" rows="10" class="form-control" required></textarea>
+            <div class="invalid-feedback">Please enter a short description</div>
+        </div>
+        <div class="mb-3"><label for="image" class="form-label">image-link</label>
+            <input type="text" name="listing[image]" placeholder="enter image URL/link" class="form-control">
+<!-- 
+            <div class="mb-3"><label for="image" class="form-label">Upload image</label>
+                <input type="file" name="listing[image]"  class="form-control"> -->
+
+
+        <div class="invalid-feedback">image-link should be valid</div></div>
+        <div class="mb-3"><label for="Price" class="form-label">Price</label>
+            <input type="number" name="listing[price]" placeholder="enter price" class="form-control" required>
+        <div class="invalid-feedback">Price should be valid!</div></div>
+        <div class="mb-3"><label for="location" class="form-label">location</label>
+            <input type="text" name="listing[location]" placeholder="enter location" class="form-control" required>
+            <div class="invalid-feedback">location should be valid</div>
+        </div>
+        <div class="mb-3"><label for="country" class="form-label">country</label>
+             <input type="text" name="listing[country]" placeholder="enter country name" class="form-control" required>
+             <div class="invalid-feedback">country name should be valid</div></div>
+             <br><br>
+        <button class="btn btn-dark btn-edit mt-3" style="margin-bottom: 2rem;">Add</button>
+   
+
+    </form>
+</div>
+</div>
+
